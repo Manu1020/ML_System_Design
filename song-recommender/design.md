@@ -3,10 +3,10 @@ Design an event-driven system that recommends music to users in real time, with 
 
 ## 📄 Table of Contents
 
-1. [User Interaction Flow](##user-interaction-flow)
-2. [High-Level System Architecture](##high-level-system-architecture-textual-diagram)
-3. [Disengagement Prediction Model (Deep Dive)](##disengagement-prediction-model-deep-dive)
-4. [Recommendation Model (Two-Tower; Deep Dive)](##recommendation-model-two-tower-deep-dive)
+1. [User Interaction Flow](#user-interaction-flow)
+2. [High-Level System Architecture](#high-level-system-architecture-textual-diagram)
+3. [Disengagement Prediction Model (Deep Dive)](#disengagement-prediction-model-deep-dive)
+4. [Recommendation Model (Two-Tower; Deep Dive)](#recommendation-model-two-tower-deep-dive)
 
 ---
 
