@@ -20,7 +20,18 @@ Design an event-driven system that recommends music to users in real time, with 
     - User re-engages through recommendation
     - OR user performs a manual search
  
-## High-Level System Architecture (Textual Diagram)
+## High-Level System Architecture
+
+| Component                   | Purpose                                 |
+|----------------------------|-----------------------------------------|
+| Event Stream               | Captures play, pause, skip, search logs |
+| Session Tracker            | Maintains short-term behavior history   |
+| Disengagement Predictor    | Flags intent shift                      |
+| Recommender Engine         | Suggests songs based on dynamic context |
+| Real-Time Serving          | Delivers low-latency responses          |
+| Feedback Collector         | Captures interaction signals            |
+
+
 
 ### 1. User Interaction Stream
 - **Raw events:** play, skip, pause, search, exit
@@ -79,9 +90,7 @@ Design an event-driven system that recommends music to users in real time, with 
   - Score distribution
   - Model latency
 ## Disengagement Prediction Model (Deep Dive)
-
-### Purpose
-Trigger recommendations before the user searches or exits, by identifying signs of disinterest.
+> "I included a prediction model to proactively detect early signs of disengagement—like skips or hesitations—so we can trigger timely, relevant recommendations before the user manually searches or exits."
 
 ### Labeling Strategy
 - **Positive label:** Exit, search, or skip burst within the next 30 minutes  
@@ -108,9 +117,7 @@ Trigger recommendations before the user searches or exits, by identifying signs 
 
 
 ## Recommendation Model (Two-Tower; Deep Dive)
-
-### Purpose
-Efficiently retrieve and rank songs personalized to the user's current context.
+> "I chose a two-tower architecture because it generalizes matrix factorization by allowing us to incorporate dynamic context, user history, and metadata, while still supporting scalable, real-time retrieval."
 
 ### Input Format
 - **Positive pairs:** (User, song) with engagement
@@ -139,13 +146,7 @@ Efficiently retrieve and rank songs personalized to the user's current context.
 - **Offline:** Recall@K, NDCG, MRR
 - **Online:** CTR, dwell time, skip rate, A/B test results
 
----
 
-## Justification Statements
 
-### Two-Tower Recommender Justification
-> "I chose a two-tower architecture because it generalizes matrix factorization by allowing us to incorporate dynamic context, user history, and metadata, while still supporting scalable, real-time retrieval."
 
-### Disengagement Prediction Model Justification
-> "I included a prediction model to proactively detect early signs of disengagement—like skips or hesitations—so we can trigger timely, relevant recommendations before the user manually searches or exits."
 
