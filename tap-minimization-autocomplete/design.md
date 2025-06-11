@@ -41,8 +41,7 @@ Real-time autocomplete suggestions in mobile messaging apps to reduce typing eff
 ### Offline
 
 - **Token Recall@K**: Is the actual next token present in the top K suggestions?  
-- **Token Sequence Recall**: Fraction of the full target phrase accurately completed by the system  
-- **NDCG@K**: Measures ranking quality when using ranked multi-token outputs  
+- **Token Sequence Recall**: Fraction of the full target phrase accurately completed by the system   
 
 > ⚠️ **Note**: Precision@K is difficult to evaluate accurately because we only observe user acceptance of one suggestion; unrejected options may still be relevant.
 
