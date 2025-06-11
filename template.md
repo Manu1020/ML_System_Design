@@ -15,6 +15,7 @@ Use this template to structure responses in interviews or projects involving app
 
 ### Offline Metrics
 
+* Precision / Recall
 * Recall\@K / Precision\@K / NDCG / Sequence Accuracy
 * Log-likelihood / token-level loss
 
@@ -43,7 +44,7 @@ Use this template to structure responses in interviews or projects involving app
 
 ## 6. Model Design
 
-* **Objective**: Classification / Ranking / Generation
+* **Objective**: Classification / Regression/ Ranking / Generation
 * **Model Type**: GBDT, Two-tower, Transformer, LLM
 * **Serving Format**: Quantized? On-device? Real-time?
 * **Training Considerations**: Loss function, imbalance, retraining cycle
@@ -60,6 +61,3 @@ Use this template to structure responses in interviews or projects involving app
 * **Monitoring**: Accuracy drift, latency, system health
 * **Deployment Strategy**: A/B testing, rollback, retraining triggers
 
----
-
-Use this as a thinking scaffold — not all sections are needed every time, but practicing this structure helps you speak and write like a system thinker.
